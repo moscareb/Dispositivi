@@ -55,5 +55,11 @@ public class Dispositivo {
 		log.info("Totale del Dispositivo");
 		return this.storageGB; 
 	}
+
+	@Override
+	public String toString() {
+		return "Dispositivo [id=" + id + ", processore=" + processore + ", ramGB=" + ramGB + ", storageGB=" + storageGB
+				+ "]";
+	}
 	
 }

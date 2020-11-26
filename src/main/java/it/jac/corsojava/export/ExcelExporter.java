@@ -23,11 +23,16 @@ public class ExcelExporter extends BaseExporter {
 		
 		 XSSFWorkbook workbook = new XSSFWorkbook();
 	     XSSFSheet sheet = workbook.createSheet("Datatypes in Java");
-	     XSSFRow riga = sheet.createRow(0);
-	     XSSFCell cella = riga.createCell(0);
 	     
-	     cella.setCellValue("Trova valore");
+	     int i = 0;
 	     
+	     for(Dispositivo d : list) {
+	    	 XSSFRow riga = sheet.createRow(i);
+		     XSSFCell cella = riga.createCell(0);
+		     cella.setCellValue(d.toString());
+		     i++;
+	     }
+
 	     try {
 	            FileOutputStream outputStream = new FileOutputStream(FILE_NAME);
 	            workbook.write(outputStream);

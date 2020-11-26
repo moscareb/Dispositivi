@@ -1,16 +1,23 @@
 package it.jac.corsojava;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import it.jac.corsojava.bean.Dispositivo;
 import it.jac.corsojava.bean.Nas;
 import it.jac.corsojava.bean.Notebook;
 import it.jac.corsojava.bean.Pc;
+import it.jac.corsojava.dao.DispositivoDao;
+import it.jac.corsojava.export.BaseExporter;
 import it.jac.corsojava.export.ExcelExporter;
+import it.jac.corsojava.export.JsonExporter;
 
 public class MainDispositivi {
 
 	public static void main(String[] args) {
 		
 		Dispositivo d = new Dispositivo();
+		List<Dispositivo> lista = new ArrayList<>();
 		
 		d.setProcessore("intel i7");
 		d.setRamGB(16);
@@ -41,9 +48,13 @@ public class MainDispositivi {
 		((Notebook) nb).setBatteriaAH(4000);
 		System.out.println(nb.getTotaleStorageGB());
 		
-		ExcelExporter ex = new ExcelExporter();
+		BaseExporter exporter = new ExcelExporter();
+		lista.add(d);
+		lista.add(n);
+		lista.add(pc);
+		lista.add(nb);
 		
-//		ex.export();
+		exporter.export(lista);
 		
 	}
 
