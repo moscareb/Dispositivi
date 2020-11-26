@@ -4,6 +4,7 @@ import it.jac.corsojava.bean.Dispositivo;
 import it.jac.corsojava.bean.Nas;
 import it.jac.corsojava.bean.Notebook;
 import it.jac.corsojava.bean.Pc;
+import it.jac.corsojava.export.ExcelExporter;
 
 public class MainDispositivi {
 
@@ -39,6 +40,10 @@ public class MainDispositivi {
 		nb.setStorageGB(500);
 		((Notebook) nb).setBatteriaAH(4000);
 		System.out.println(nb.getTotaleStorageGB());
+		
+		ExcelExporter ex = new ExcelExporter();
+		
+//		ex.export();
 		
 	}
 
