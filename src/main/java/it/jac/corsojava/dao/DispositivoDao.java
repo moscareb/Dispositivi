@@ -50,7 +50,7 @@ public class DispositivoDao {
 					Notebook nb2 = (Notebook)d;
 					nb1.setBatteriaAH(nb2.getBatteriaAH());
 				}
-				
+//				commento
 				break;
 			}
 		}
