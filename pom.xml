@@ -10,6 +10,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 	
+<!-- TEXT -->
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -17,12 +18,15 @@
 			<version>2.13.3</version>
 		</dependency>
 	
-		<dependency>  
-    		<groupId>com.googlecode.json-simple</groupId>  
-   			<artifactId>json-simple</artifactId>  
-    		<version>1.1</version>  
-  		</dependency>
-	
+<!-- JSON -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.6</version>
+		</dependency>
+    	
+    	
+<!-- EXCEL -->
 		<dependency>
     		<groupId>org.apache.poi</groupId>
     		<artifactId>poi-ooxml</artifactId>

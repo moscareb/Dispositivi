@@ -48,13 +48,17 @@ public class MainDispositivi {
 		((Notebook) nb).setBatteriaAH(4000);
 		System.out.println(nb.getTotaleStorageGB());
 		
-		BaseExporter exporter = new ExcelExporter();
+		BaseExporter exporterExcel = new ExcelExporter();
 		lista.add(d);
 		lista.add(n);
 		lista.add(pc);
 		lista.add(nb);
 		
-		exporter.export(lista);
+		exporterExcel.export(lista);
+		
+		BaseExporter exporterJson = new JsonExporter();
+		
+		exporterJson.export(lista);
 		
 	}
 

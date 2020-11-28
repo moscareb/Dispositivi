@@ -43,7 +43,7 @@ public class ExcelExporter extends BaseExporter {
 	            e.printStackTrace();
 	        }
 
-	        System.out.println("Done");
+	        System.out.println("Done Excel");
 	     
 	}
 	
